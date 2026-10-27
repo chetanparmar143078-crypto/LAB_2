@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Employee Registration Form</title>
+</head>
+<body>
+<h1>Employee Registration Form</h1>
+<form action="welcome.html" method="get" novalidate>
+<!-- Section 1: Personal Information -->
+<fieldset>
+<legend>Personal Information</legend>
+<label>Full Name:</label>
+<input type="text" name="emp_name" required pattern="[A-Za-z]{3,50}" autocomplete="off"/>
+<br /><br />
+<label>Email:</label>
+<input type="email" name="emp_email" pattern="[a-zA-Z]+\.{1}[0-9]{6}@marwadiuniversity\.ac\.in"/>
+<br /><br />
+<label>Password:</label>
+<input type="password" name="emp_password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"/>
+<br /><br />
+<label>Phone number:</label>
+<input type="tel" name="emp_phone" pattern="[0-9]{10}">
+<br /><br />
+<label>Age:</label>
+<input type="number" name="emp_age" pattern="[0-9]{2}"/>
+<br /><br />
+<label>Gender:</label>
+<input type="radio" name="emp_gender" value="male"/><label>Male</label>
+<input type="radio" name="emp_gender" value="female"/><label>Female</label>
+<br /><br />
+</fieldset>
+<!-- Section 2: Preferences & Extras -->
+<fieldset>
+<legend>Preferences & Extras</legend>
+<label>Upload Profile Picture:</label>
+<input type="file" name="emp_file" />
+<br /><br />
+<label>Favorite Color:</label>
+<input type="color" name="emp_color" />
+<br /><br />
+<label>Search for Skills/Department:</label>
+<input type="search" name="emp_search" />
+<br /><br />
+<label>Experience Range (Years):</label>
+<input type="range" name="emp_range" />
+<br /><br />
+<label>Personal Website / Portfolio:</label>
+<input type="url" name="emp_url" pattern="https?://.+" />
+<br /><br />
+<label>Department Type:</label>
+<select name="emp_department">
+<optgroup label="Technical">
+<option value="IT">IT & Software</option>
+<option value="EE">Electrical</option>
+<option value="ME">Mechanical</option>
+<option value="CIV">Civil</option>
+</optgroup>
+<optgroup label="Management">
+<option value="HR">Human Resources</option>
+<option value="FIN">Finance</option>
+</optgroup>
+</select>
+<br /><br />
+<label>Preferred Office Location:</label>
+<input list="countries" name="emp_location"/>
+<datalist id="countries">
+<option value="USA">USA</option>
+<option value="UK">UK</option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+</datalist>
+<br /><br />
+<label>Agree to NDA & Terms:</label>
+<input type="checkbox" name="emp_agree" value="I agree"/><label>I agree</label>
+</fieldset>
+<!-- Section 3: Date & Time Info -->
+<fieldset>
+<legend>Date & Time Info</legend>
+<label>Select Date of Birth: </label>
+<input type="date" name="emp_dob" />
+<br /><br />
+<label>Select Interview/Shift Time: </label>
+<input type="time" name="emp_time" />
+<br /><br />
+<label>Select Joining Month: </label>
+<input type="month" name="emp_month" />
+<br /><br />
+<label>Select Work Week: </label>
+<input type="week" name="emp_week" />
+<br /><br />
+<label>Select Date and Time of Joining: </label>
+<input type="datetime-local" name="emp_datetime" />
+<br /><br />
+</fieldset>
+<!-- Section 4: Form Controls -->
+<fieldset>
+<legend>Form Controls</legend>
+<button onclick="sub()">Click Me</button>
+<input type="image" src="butterfly.png" alt="Register Now" height="50" width="50" />
+<br /><br />
+<input type="submit" value="Submit Registration" />
+<br /><br />
+<input type="reset" value="Reset Form" />
+<br /><br />
+</fieldset>
+</form>
+<script>
+function sub() {
+}
+// Custom script action
+</script>
+</body>
+</html>
